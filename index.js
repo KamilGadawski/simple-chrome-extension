@@ -1,5 +1,5 @@
 const saveBtn = document.getElementById('input-btn');
-let myLeads = [1, 2, 3, 4, 5, 6, 7, 8];
+let myLeads = [];
 const inputEl = document.getElementById('input-el');
 const linkList = document.getElementById('link-list');
 
