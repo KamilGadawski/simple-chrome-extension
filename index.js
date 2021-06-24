@@ -1,18 +1,19 @@
+let myLeads = [];
+
 const saveBtn = document.getElementById('input-save-btn');
 const delBtn = document.getElementById('input-del-btn');
 const inputEl = document.getElementById('input-el');
 const linkList = document.getElementById('link-list');
 let linksFromStorage = JSON.parse(localStorage.getItem('storageLinks'));
 
-let myLeads = [];
 
 saveBtn.addEventListener('click', () => {
-	localstorageSave();
+	localstorageSave(myLeads);
 });
 
 inputEl.addEventListener('keydown', (e) => {
 	if (e.code === 'Enter') {
-		localstorageSave();
+		localstorageSave(myLeads);
 	}
 });
 
@@ -26,15 +27,15 @@ if (linksFromStorage) {
 	renderLink();
 }
 
-function localstorageSave() {
+function localstorageSave(link) {
 	if (inputEl.value === '') {
 		return;
 	}
 
-	myLeads.push(inputEl.value);
+	link.push(inputEl.value);
 	inputEl.value = '';
 
-	localStorage.setItem('storageLinks', JSON.stringify(myLeads));
+	localStorage.setItem('storageLinks', JSON.stringify(link));
 	location.reload();
 }
 
