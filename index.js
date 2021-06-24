@@ -24,7 +24,7 @@ delBtn.addEventListener('click', () => {
 
 if (linksFromStorage) {
 	myLeads = linksFromStorage;
-	renderLink();
+	render(myLeads);
 }
 
 function localstorageSave(link) {
@@ -39,8 +39,8 @@ function localstorageSave(link) {
 	location.reload();
 }
 
-function renderLink() {
-	myLeads.forEach((item) => {
+function render(linkArray) {
+	linkArray.forEach((item) => {
 		let liElement = document.createElement('li');
 		let createATag = document.createElement('a');
 
