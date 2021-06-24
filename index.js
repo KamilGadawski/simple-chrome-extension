@@ -1,4 +1,4 @@
-const saveBtn = document.getElementById('input-btn');
+const saveBtn = document.getElementById('input-save-btn');
 const delBtn = document.getElementById('input-del-btn');
 const inputEl = document.getElementById('input-el');
 const linkList = document.getElementById('link-list');
@@ -35,9 +35,7 @@ function localstorageSave() {
 	inputEl.value = '';
 
 	localStorage.setItem('storageLinks', JSON.stringify(myLeads));
-	//renderLink();
 	location.reload();
-	console.log(localStorage)
 }
 
 function renderLink() {
