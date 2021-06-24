@@ -6,7 +6,6 @@ const inputEl = document.getElementById('input-el');
 const linkList = document.getElementById('link-list');
 let linksFromStorage = JSON.parse(localStorage.getItem('storageLinks'));
 
-
 saveBtn.addEventListener('click', () => {
 	localstorageSave(myLeads);
 });
