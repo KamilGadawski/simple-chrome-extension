@@ -27,11 +27,17 @@ if (linksFromStorage) {
 }
 
 function localstorageSave() {
+	if (inputEl.value === '') {
+		return;
+	}
+
 	myLeads.push(inputEl.value);
 	inputEl.value = '';
 
 	localStorage.setItem('storageLinks', JSON.stringify(myLeads));
-	renderLink();
+	//renderLink();
+	location.reload();
+	console.log(localStorage)
 }
 
 function renderLink() {
