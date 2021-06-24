@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	padding: 10px;
 	font-family: Arial, Helvetica, sans-serif;
-    min-width: 450px;
+	min-width: 450px;
 }
 
 input {
@@ -13,7 +13,20 @@ input {
 }
 
 .save-btn {
-	background-color: #5f9341;
+	background-color: #00ba37;
+}
+
+.save-btn:hover {
+	background-color: #00a32a;
+}
+.del-btn {
+	background-color: #e65054;
+}
+.del-btn:hover {
+	background-color: #b32d2e;
+}
+
+.btn {
 	margin-top: 8px;
 	font-size: 16px;
 	color: white;
